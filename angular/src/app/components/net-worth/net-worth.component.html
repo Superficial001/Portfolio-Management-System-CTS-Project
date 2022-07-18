@@ -1,0 +1,30 @@
+<app-navbar-logout></app-navbar-logout>
+<div id="loginBody">
+    <div id="calculatePortfolio">
+        <img class="card-img-top img-fluid"
+             src="https://cdn.govexec.com/media/img/upload/2020/10/14/shutterstock_1517792294/860x394.jpg"
+             style="width: 600px; height: 300px;" alt="Card image cap">
+    </div>
+    <div id="sell">
+        <div class="card-block">
+            <h4 class="card-title">Calculate Networth</h4>
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Asset</th>
+                    <th scope="col">Type</th>
+                    <th scope="col">Units</th>
+                  </tr>
+                </thead>
+                <tbody *ngFor="let asset of assets">
+                  <tr>
+                    <td>{{asset.assetid}}</td>
+                    <td>{{asset.type}}</td>
+                    <td>{{asset.units}}</td>
+                  </tr>
+                </tbody>
+              </table>
+              <div>Net worth: {{networth}}</div>
+        </div>
+    </div>
+</div>

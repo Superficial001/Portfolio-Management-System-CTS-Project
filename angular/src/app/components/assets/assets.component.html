@@ -1,0 +1,37 @@
+<app-navbar-logout></app-navbar-logout>
+<div id="loginBody">
+    <div id="calculatePortfolio">
+        <img class="card-img-top img-fluid" id="sellImage"
+            src="http://ukbusinessbrokers.com/wp-content/uploads/asset-share-sale.jpg"
+            style="width: 600px; height: 300px;" alt="Card image cap">
+    </div>
+    <div id="sell">
+        <div class="card-block">
+            <h4 class="card-title">Sell Assets</h4>
+            <form [formGroup]="formData" (ngSubmit)="sellAssets()">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Asset</th>
+                            <th scope="col">Type</th>
+                            <th scope="col">Units Available</th>
+                        </tr>
+                    </thead>
+                    <tbody *ngFor="let asset of assets">
+                        <tr>
+                            <td>{{asset.assetid}}</td>
+                            <td>{{asset.type}}</td>
+                            <td>{{asset.units}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <select formControlName="asset">
+                    <option *ngFor="let asset of assets" value="{{asset.assetid}}">{{asset.assetid}}</option>
+                </select>
+                <input type="number" id="quantity" formControlName="quantity" name="quantity" value="0" min="0" max="10">
+                <br />
+                <button type="submit" class="btn btn-primary">Calculate Net Worth</button>
+            </form>
+        </div>
+    </div>
+</div>

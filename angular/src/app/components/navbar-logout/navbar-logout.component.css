@@ -1,0 +1,16 @@
+#navbar {
+    margin-top: 50px;
+    margin-left: 100px;
+    margin-right: 100px;
+    padding: 40px;
+    border-radius: 20px;
+    background-color: #e3f2fd;
+}
+
+#loginButton {
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 20px;
+}
